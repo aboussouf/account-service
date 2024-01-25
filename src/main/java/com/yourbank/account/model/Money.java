@@ -1,8 +1,6 @@
 package com.yourbank.account.model;
 
-import lombok.Data;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
 import java.math.BigDecimal;
 
