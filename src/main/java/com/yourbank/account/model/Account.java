@@ -20,7 +20,7 @@ public class Account {
     }
 
     public static Account anInitialAccount() {
-        return new Account("123", anAmountOf(BigDecimal.ZERO));
+        return new Account("123456L", anAmountOf(BigDecimal.ZERO));
     }
 
     public void add(Money money) {

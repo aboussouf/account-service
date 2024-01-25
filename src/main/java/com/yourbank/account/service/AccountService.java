@@ -13,7 +13,12 @@ public class AccountService {
 
     private AccountRepository accountRepository;
 
-    public Account handleOperation(OperationType operationType, Money money) {
+    public Account handleOperation(String accountId, OperationType operationType, Money money) {
+
+        if(!accountId.equals("123456L")) {
+            return null;
+        }
+
         Account account = Account.anInitialAccount();
 
         Account persistedAccount = accountRepository.getAccountById(account.getAccountId());

@@ -30,7 +30,7 @@ public class AccountServiceTest {
         Account account= anInitialAccount();
 
         // When
-        Account result = accountService.handleOperation(OperationType.DEPOSIT, anAmountOf(new BigDecimal("10.0")));
+        Account result = accountService.handleOperation("123456L", OperationType.DEPOSIT, anAmountOf(new BigDecimal("10.0")));
 
         // Then
         assertThat(result.getBalance().getAmount()).isEqualTo(new BigDecimal("10.0"));

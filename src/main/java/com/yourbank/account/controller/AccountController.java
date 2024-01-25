@@ -17,7 +17,7 @@ public class AccountController {
 
     @PostMapping
     Account handleOperation(@PathVariable("account_id") String accountId, @ModelAttribute String operationType, @ModelAttribute String amount) {
-        return accountService.handleOperation(OperationType.valueOf(operationType), Money.anAmountOf(new BigDecimal(amount)));
+        return accountService.handleOperation(accountId, OperationType.valueOf(operationType), Money.anAmountOf(new BigDecimal(amount)));
     }
 
 }
